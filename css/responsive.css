@@ -1,0 +1,400 @@
+/* ============================================================
+   রেসপন্সিভ ডিজাইন - মোবাইল, ট্যাবলেট এবং ডেস্কটপ
+   ============================================================ */
+
+/* ===================== ট্যাবলেট (768px - 1024px) ===================== */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+
+    .header-content {
+        gap: var(--spacing-lg);
+    }
+
+    .header-right {
+        gap: var(--spacing-lg);
+    }
+
+    .nav-list {
+        gap: var(--spacing-lg);
+    }
+
+    .logo-text {
+        font-size: var(--font-size-xl);
+    }
+
+    h1 { font-size: 28px; }
+    h2 { font-size: 24px; }
+    h3 { font-size: 20px; }
+
+    .news-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .newsletter-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        min-width: 100%;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-xl);
+    }
+}
+
+/* ===================== মোবাইল (480px - 768px) ===================== */
+@media (max-width: 768px) {
+    :root {
+        --font-size-base: 14px;
+        --font-size-lg: 16px;
+        --font-size-2xl: 20px;
+        --font-size-3xl: 24px;
+        --spacing-lg: 12px;
+        --spacing-xl: 16px;
+        --spacing-2xl: 24px;
+    }
+
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+
+    /* ============= হেডার ============= */
+    
+    .top-bar {
+        display: none;
+    }
+
+    .main-header {
+        padding: var(--spacing-lg) 0;
+    }
+
+    .header-content {
+        flex-wrap: wrap;
+        gap: var(--spacing-md);
+        justify-content: space-between;
+    }
+
+    .logo-wrapper {
+        order: 1;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+        order: 3;
+        width: 40px;
+        height: 40px;
+        background-color: var(--secondary-color);
+        border-radius: 4px;
+    }
+
+    .main-nav {
+        order: 4;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .main-nav.active {
+        max-height: 400px;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        background-color: var(--secondary-color);
+        padding: var(--spacing-lg);
+        border-radius: 4px;
+    }
+
+    .nav-link {
+        display: block;
+        padding: var(--spacing-md) 0;
+        border-bottom: 1px solid var(--light-gray);
+    }
+
+    .nav-link:last-child {
+        border-bottom: none;
+    }
+
+    .header-right {
+        order: 2;
+        flex: 1;
+    }
+
+    .search-bar-wrapper {
+        width: 100%;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .dropdown-menu {
+        position: static;
+        background: var(--light-gray);
+        box-shadow: none;
+        max-width: none;
+        padding: 0;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: none;
+    }
+
+    .dropdown-menu.active {
+        display: block;
+    }
+
+    /* ============= কন্টেন্ট ============= */
+
+    .main-content {
+        padding: var(--spacing-lg) 0;
+    }
+
+    .section {
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .section-title {
+        font-size: var(--font-size-2xl);
+        margin-bottom: var(--spacing-lg);
+    }
+
+    h1 { font-size: 24px; }
+    h2 { font-size: 20px; }
+    h3 { font-size: 18px; }
+    h4 { font-size: 16px; }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .news-card-list {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .news-card-list .news-card-image-wrapper {
+        width: 100%;
+        height: auto;
+        padding-bottom: 66.66%;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: var(--spacing-lg);
+    }
+
+    .team-card-designation {
+        font-size: var(--font-size-sm);
+    }
+
+    /* ============= ফুটার ============= */
+
+    .newsletter-content {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+        text-align: center;
+    }
+
+    .newsletter-form {
+        width: 100%;
+    }
+
+    .newsletter-input-wrapper {
+        flex-direction: column;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .footer-bottom-content {
+        gap: 0;
+    }
+
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* ===================== छोटा मोबाइल (< 480px) ===================== */
+@media (max-width: 480px) {
+    :root {
+        --font-size-base: 13px;
+        --font-size-lg: 14px;
+        --font-size-2xl: 18px;
+        --font-size-3xl: 20px;
+        --spacing-lg: 8px;
+        --spacing-xl: 12px;
+        --spacing-2xl: 16px;
+    }
+
+    .container {
+        padding: 0 8px;
+    }
+
+    .main-header {
+        padding: 8px 0;
+    }
+
+    .logo-text {
+        font-size: 16px;
+    }
+
+    .logo-tagline {
+        font-size: 11px;
+    }
+
+    .search-bar {
+        padding: 6px 8px;
+    }
+
+    .search-input {
+        padding-right: 4px;
+    }
+
+    .nav-list {
+        padding: 8px;
+    }
+
+    .news-card-content {
+        padding: 8px;
+    }
+
+    .news-card-title {
+        font-size: var(--font-size-lg);
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .back-to-top {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+
+    h1 { font-size: 20px; }
+    h2 { font-size: 18px; }
+    h3 { font-size: 16px; }
+    h4 { font-size: 14px; }
+
+    .btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .newsletter-btn {
+        padding: 6px 12px;
+    }
+
+    .contact-info p {
+        font-size: 12px;
+    }
+}
+
+/* ===================== ল্যান্ডস্কেপ ট্যাবলেট ===================== */
+@media (max-width: 1024px) and (orientation: landscape) {
+    .main-content {
+        padding: var(--spacing-lg) 0;
+    }
+
+    .news-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ===================== প্রিন্ট স্টাইল ===================== */
+@media print {
+    .top-bar,
+    .mobile-menu-toggle,
+    .search-bar-wrapper,
+    .newsletter-section,
+    .back-to-top {
+        display: none;
+    }
+
+    body {
+        background-color: var(--white);
+    }
+
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===================== ডার্ক মোড সাপোর্ট ===================== */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --secondary-color: #222222;
+        --text-dark: #F5F5F5;
+        --text-light: #CCCCCC;
+        --border-color: #444444;
+        --light-gray: #333333;
+    }
+
+    body {
+        background-color: #1a1a1a;
+        color: var(--text-dark);
+    }
+
+    .main-header {
+        background-color: #222222;
+    }
+
+    .news-card {
+        background-color: #222222;
+    }
+
+    .nav-list {
+        background-color: #333333;
+    }
+
+    .search-bar {
+        background-color: #333333;
+    }
+}
+
+/* ===================== অ্যাক্সেসিবিলিটি ===================== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ===================== ফোকাস ভিজিবিলিটি ===================== */
+:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
